@@ -316,3 +316,84 @@
 // Advanced:
 // 3️⃣ Clone an object and update one property using spread syntax.
 
+                                    //Day-2
+
+                                    // Closure:
+// Create a function counter() that returns another function to increase and show the count each time it’s called.
+//    function counter(){
+//     let count =0;
+//     return function(){
+//         count++;
+//         console.log(count)
+//     }
+//    }
+//    let abcd = counter();
+//    abcd();
+// Write a function createMultiplier(x) that returns a new function to multiply any number by x.
+    // function createMultiplier(x){
+    //     return function(num){
+    //         console.log(num*x)
+    //     }
+    // }
+    // let result = createMultiplier(3);
+    // result(5);
+// forEach:
+// Write a function logSquares(arr) that prints the square of each number in an array using forEach.
+
+// map:
+// Create a function addPrefix(arr, prefix) that adds a given prefix to each string in an array using map.
+// Example: addPrefix(["cat", "dog"], "super") → ["supercat", "superdog"]
+//     let addPrefix = (arr, prefix) => {
+//   return arr.map(item => prefix + item);
+// };
+
+// console.log(addPrefix(["cat", "dog"], "super"));
+
+// filter:
+// Write a function getLongWords(words) that returns only words with more than 4 letters.
+    let getLongWords = (words) => {
+  return words.filter(word => word.length > 4);
+};
+
+console.log(getLongWords(["sun", "earth", "moon", "galaxy", "sky"]));
+// reduce:
+// Build a function sumEven(nums) that uses reduce to sum only the even numbers.
+    let sumEven = (nums) => {
+  return nums.reduce((sum, num) => num % 2 === 0 ? sum + num : sum, 0);
+};
+
+console.log(sumEven([1, 2, 3, 4, 5, 6]));
+
+// map + filter combo:
+// Given an array of numbers, first filter out odd numbers, then return their squares using map.
+    let sd =(arr)=>{
+      return  arr.filter((val)=>val%2===1).map((val)=>val*val)
+    }
+    console.log(sd([1,2,3,4,5]))
+// spread:
+// Write a function combineArrays(...arrays) that merges multiple arrays into one using spread.
+    let combineArrays=(...arrays)=>{
+        return [].concat(...arrays);
+    }
+    console.log(combineArrays([1,2],[3,4]));
+// rest:
+// Create a function average(...nums) that calculates the average of any number of arguments.
+    let average=(...nums)=>{
+        let sum = nums.reduce((acc,val)=>{return acc+val},0);
+        console.log(sum)
+        return sum/nums.length;
+    }
+    console.log(average(1,2,3,4,5));
+// mix all concepts:
+// Write a function processNumbers(...nums) that:
+// Filters positive numbers
+// Squares them (map)
+// Returns the sum using reduce
+    let processNumbers=(...nums)=>{
+        let positive = nums.filter((num)=>num>0);
+        console.log(positive);
+        let squares = nums.map((num)=>{return num*num});
+        console.log(squares)
+        return nums.reduce((acc,val)=> acc+val,0)
+    }
+    console.log(processNumbers(1,2,3,4,5));
