@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#Flipper {
+  position: absolute;
+  top: 18%;
+  left: 48%;
+}
+
+img {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* background image covers full screen */
+  z-index: -1;
+}
+
+.container {
+  position: absolute;
+  /* border: 2px solid red; */
+  top: 50%;
+  left: 40%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 12px;
+  /* text-align: center;
+  width: 250px; */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+ img {
+  left: 20px;
+  width: 180px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.palette {
+  display: block;
+    margin: 10px 0;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px; */
+}
+
+#photo {
+  /* border: 2px solid green; */
+  height: 200px;
+  width: 180px;
+  left: 50px;
+}
+
+button {
+  display: block;
+  margin: 10px 0; /* optional spacing between buttons */
+}
+
+
+.color {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color:hover {
+  transform: scale(1.1);
+}
