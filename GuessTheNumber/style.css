@@ -1,0 +1,26 @@
+main{
+    padding: 50px;
+    margin-top: 50px;
+    margin-left: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+input{
+    width: 100px;
+
+}
+
+button{
+    width: 100px;
+}
+
+.chances{
+    border: 1px solid gray;
+    padding: 5px;
+    color: aliceblue;
+    height: 10px;
+    width: 160px;
+    background-color: green;
+}
